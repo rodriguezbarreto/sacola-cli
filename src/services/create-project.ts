@@ -2,6 +2,13 @@ import { prompt } from "inquirer";
 
 export class CreateProject {
     static async execute(): Promise<CreateProject> {
+        const info = await this.getProjectInfo();
+        console.log(info);
+
+        return new CreateProject();
+    }
+
+    private static async getProjectInfo(): Promise<string> {
         const { name } = await prompt([
             {
                 type: "input",
@@ -9,7 +16,7 @@ export class CreateProject {
                 message: "Qual seu nome?",
             },
         ]);
-        console.log(name);
-        return new CreateProject();
+
+        return name;
     }
 }
