@@ -1,8 +1,8 @@
-import inquirer from "inquirer";
+import { prompt } from "inquirer";
 
 export class CreateProject {
     static async execute(): Promise<CreateProject> {
-        const { name } = await inquirer.prompt([
+        const { name } = await prompt([
             {
                 type: "input",
                 name: "name",
