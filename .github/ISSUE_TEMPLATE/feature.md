@@ -1,7 +1,7 @@
 ---
 name: feature
 about: Suggest an idea for this project
-title: ''
+title: "[FEAT]"
 labels: feat
 assignees: rodriguezbarreto
 
